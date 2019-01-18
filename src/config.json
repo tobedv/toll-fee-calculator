@@ -1,0 +1,11 @@
+{
+  "free_days": ["SATURDAY", "SUNDAY"],
+  "free_dates": [],
+  "taxes": [
+    {
+      "start_time": "06:00",
+      "end_time": "06:29",
+      "price": 9
+    }
+  ]
+}
