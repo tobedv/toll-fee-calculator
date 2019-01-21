@@ -4,7 +4,7 @@ import json
 
 def generate_july_dates(year):
     dates = []
-    start = datetime.datetime(year=2019, month=7, day=1)
+    start = datetime.datetime(year=year, month=7, day=1)
     for day in range(2, 32):
         dates.append(start.date())
         start = start.replace(day=day)
@@ -24,7 +24,7 @@ def generate_red_and_free_days(red_days):
 
 if __name__ == "__main__":
     """
-    Red days are fetched from, https://publicholidays.se/sv/2019-dates/
+    Red days are taken from, https://publicholidays.se/sv/2019-dates/
     Free days from https://transportstyrelsen.se/sv/vagtrafik/Trangselskatt/Betalning/dagar-da-trangselskatt-inte-tas-ut/
     """
     year = 2019

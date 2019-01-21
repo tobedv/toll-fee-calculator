@@ -61,6 +61,11 @@
     "max_daily_tax": 60,
     "tax": [
       {
+        "start_time": "00:00",
+        "end_time": "05:59",
+        "price": 0
+      },
+      {
         "start_time": "06:00",
         "end_time": "06:29",
         "price": 9
@@ -107,7 +112,7 @@
       },
       {
         "start_time": "18:30",
-        "end_time": "05:59",
+        "end_time": "23:59",
         "price": 0
       }
     ],
