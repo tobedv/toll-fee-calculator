@@ -116,7 +116,7 @@
         "price": 0
       }
     ],
-    "free_vehicles": [
+    "toll_free_vechicles": [
       "Motorbike",
       "Tractor",
       "Emergency",
