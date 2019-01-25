@@ -28,7 +28,7 @@ from project root, run "pytest test"
 
 Make sure you have Python 3.7+ and Pipenv installed  
 naviate to the project folder  
-"pipenv install --d" to install developmen requirements (pytest basicly)  
+"pipenv install --d" to install development requirements
 "pipenv shell" to activate the shell  
 "python src/main.py /PATH/TO/CSV" to calculate a toll  
 ("python src/main.py test_csvs/abc123-regular.csv") for a test file  
