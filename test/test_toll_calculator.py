@@ -11,28 +11,26 @@ import toll_calculator
 @pytest.fixture
 def calculator():
     cfg = {
-        "2019": {
-            "max_daily_tax": 60,
-            "tax": [
-                {"start_time": "00:00", "end_time": "05:59", "price": 0},
-                {"start_time": "06:00", "end_time": "06:29", "price": 9},
-                {"start_time": "06:30", "end_time": "06:59", "price": 16},
-                {"start_time": "07:00", "end_time": "07:59", "price": 22},
-                {"start_time": "08:00", "end_time": "08:29", "price": 16},
-                {"start_time": "08:30", "end_time": "14:59", "price": 9},
-                {"start_time": "15:00", "end_time": "15:29", "price": 16},
-                {"start_time": "15:30", "end_time": "16:59", "price": 22},
-                {"start_time": "17:00", "end_time": "17:59", "price": 16},
-                {"start_time": "18:00", "end_time": "18:29", "price": 9},
-                {"start_time": "18:30", "end_time": "23:59", "price": 0},
-            ],
-        }
+        "max_daily_tax": 60,
+        "tax": [
+            {"start_time": "00:00", "end_time": "05:59", "price": 0},
+            {"start_time": "06:00", "end_time": "06:29", "price": 9},
+            {"start_time": "06:30", "end_time": "06:59", "price": 16},
+            {"start_time": "07:00", "end_time": "07:59", "price": 22},
+            {"start_time": "08:00", "end_time": "08:29", "price": 16},
+            {"start_time": "08:30", "end_time": "14:59", "price": 9},
+            {"start_time": "15:00", "end_time": "15:29", "price": 16},
+            {"start_time": "15:30", "end_time": "16:59", "price": 22},
+            {"start_time": "17:00", "end_time": "17:59", "price": 16},
+            {"start_time": "18:00", "end_time": "18:29", "price": 9},
+            {"start_time": "18:30", "end_time": "23:59", "price": 0},
+        ],
     }
     yield toll_calculator.TollCalculator(cfg)
 
 
 def test__load_tax_mappings(calculator):
-    calculator._load_tax_mappings("2019")
+    calculator._load_tax_mappings()
     expected_first = {
         "start_time": datetime.time(0, 0),
         "end_time": datetime.time(5, 59),
